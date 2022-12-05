@@ -17,6 +17,7 @@ public class MovelService {
     public void insert(Movel movelRequest) {
         Movel movel = new Movel();
         movel.setNome(movelRequest.getNome());
+        movel.setComodoId(movelRequest.getComodoId());
         movelRepository.persist(movel);
     }
 
@@ -33,6 +34,7 @@ public class MovelService {
     public void update(Long id, Movel movelRequest) {
         Movel movel = movelRepository.findById(id);
         movel.setNome(movelRequest.getNome());
+        movel.setComodoId(movelRequest.getComodoId());
         movelRepository.persist(movel);
     }
 }
