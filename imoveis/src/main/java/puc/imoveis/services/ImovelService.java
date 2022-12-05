@@ -5,16 +5,12 @@ import javax.inject.Inject;
 import javax.transaction.Transactional;
 
 import puc.imoveis.entities.Imovel;
-import puc.imoveis.repositories.ComodoRepository;
 import puc.imoveis.repositories.ImovelRepository;
 
 @ApplicationScoped
 public class ImovelService {
     @Inject
     ImovelRepository imovelRepository;
-
-    @Inject
-    ComodoRepository comodoRepository;
 
     @Transactional
     public void insert(Imovel imovelRequest) {
