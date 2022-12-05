@@ -1,7 +1,5 @@
 package puc.imoveis.entities;
 
-import java.util.Objects;
-
 import javax.persistence.*;
 
 @Entity
@@ -11,6 +9,8 @@ public class Movel {
     private Long id;
 
     private String nome;
+
+    private Long comodoId;
 
     public Long getId() {
         return id;
@@ -28,16 +28,11 @@ public class Movel {
         this.nome = nome;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Movel movel = (Movel) o;
-        return Objects.equals(id, movel.id);
+    public Long getComodoId() {
+        return comodoId;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
+    public void setComodoId(Long comodoId) {
+        this.comodoId = comodoId;
     }
 }
