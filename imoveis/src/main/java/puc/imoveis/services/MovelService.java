@@ -19,4 +19,20 @@ public class MovelService {
         movel.setNome(movelRequest.getNome());
         movelRepository.persist(movel);
     }
+
+    public Movel get(Long id) {
+        return movelRepository.findById(id);
+    }
+
+    @Transactional
+    public void delete(Long id) {
+        movelRepository.deleteById(id);
+    }
+
+    @Transactional
+    public void update(Long id, Movel movelRequest) {
+        Movel movel = movelRepository.findById(id);
+        movel.setNome(movelRequest.getNome());
+        movelRepository.persist(movel);
+    }
 }

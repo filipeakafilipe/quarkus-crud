@@ -28,16 +28,16 @@ public class Movel {
         this.nome = nome;
     }
 
-    // @Override
-    // public boolean equals(Object o) {
-    //     if (this == o) return true;
-    //     if (o == null || getClass() != o.getClass()) return false;
-    //     Movel movel = (Movel) o;
-    //     return Objects.equals(id, movel.id);
-    // }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Movel movel = (Movel) o;
+        return Objects.equals(id, movel.id);
+    }
 
-    // @Override
-    // public int hashCode() {
-    //     return Objects.hash(id);
-    // }
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 }
