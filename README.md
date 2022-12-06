@@ -21,7 +21,7 @@ docker run --name postgres-imoveis -e "POSTGRES_PASSWORD=postgres" -p 5433:5432 
 * Clone o projeto e vá para a pasta do projeto:
 ```
 git clone https://github.com/filipeakafilipe/quarkus-crud.git
-cd ./imoveis
+cd ./quarkus-crud/imoveis
 ```
 * Inicie a aplicação:
 ```
