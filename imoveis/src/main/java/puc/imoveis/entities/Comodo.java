@@ -15,6 +15,8 @@ public class Comodo implements Serializable{
 
     private Double tamanho;
 
+    private String nome;
+
     private Long imovelId;
 
     @OneToMany
@@ -51,5 +53,13 @@ public class Comodo implements Serializable{
 
     public void setMoveis(List<Movel> moveis) {
         this.moveis = moveis;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }

@@ -16,6 +16,7 @@ public class ComodoService {
     public void insert(Comodo comodoRequest) {
         Comodo comodo = new Comodo();
         comodo.setTamanho(comodoRequest.getTamanho());
+        comodo.setNome(comodoRequest.getNome());
         comodo.setImovelId(comodoRequest.getImovelId());
         comodoRepository.persist(comodo);
     }
@@ -33,6 +34,7 @@ public class ComodoService {
     public void update(Long id, Comodo comodoRequest) {
         Comodo comodo = comodoRepository.findById(id);
         comodo.setTamanho(comodoRequest.getTamanho());
+        comodo.setNome(comodoRequest.getNome());
         comodo.setImovelId(comodoRequest.getImovelId());
         comodoRepository.persist(comodo);
     }

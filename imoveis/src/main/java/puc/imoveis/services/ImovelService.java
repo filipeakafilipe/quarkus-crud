@@ -17,6 +17,7 @@ public class ImovelService {
         Imovel imovel = new Imovel();
         imovel.setTamanho(imovelRequest.getTamanho());
         imovel.setValor(imovelRequest.getValor());
+        imovel.setEndereco(imovelRequest.getEndereco());
         imovelRepository.persist(imovel);
     }
 
@@ -34,6 +35,7 @@ public class ImovelService {
         Imovel imovel = imovelRepository.findById(id);
         imovel.setTamanho(imovelRequest.getTamanho());
         imovel.setValor(imovelRequest.getValor());
+        imovel.setEndereco(imovelRequest.getEndereco());
         imovelRepository.persist(imovel);
     }
 }
